@@ -1,0 +1,45 @@
+1. Insertion Sort inplace and iterative approach
+
+Best Time : O(n) || Space Complexity : O(1) || array = [1, 2, 3, 4, 5, 6] i.e already sorted array
+Worst Time : O(n^2) || Space Complecity : O(1) || array = [6, 5, 4, 3, 2, 1] i.e reverse sorted array
+Average Time : O(n^2) || Space Complexity : O(1) || array = [2, 8, 4, 1, 9, 5] i.e elements in any order other than sorted or reverse order.
+
+
+2. Insertion Sort using recursion - The time complexity and space required will remain same.
+T(n) = T(n-1) + O(n)
+
+Best Time : O(n) || Space Complexity : O(1) || array = [1, 2, 3, 4, 5, 6] i.e already sorted array
+Worst Time : O(n^2) || Space Complecity : O(1) || array = [6, 5, 4, 3, 2, 1] i.e reverse sorted array
+Average Time : O(n^2) || Space Complexity : O(1) || array = [2, 8, 4, 1, 9, 5] i.e elements in any order other than sorted or reverse order.
+
+
+
+3. Merge Sort using divide and conquer
+
+Time complexity will remain same in every case, because irrespective of the arrangement of array i.e sorted, reverse sorted or random, we are dividing the array into 2 parts
+and recursively sorting them and then merging them.
+
+T(n)=2T(n/2) + O(n) is the recurrence relation
+
+Best Time : O(n*log(n)) || Space Complexity : O(n) || array = [1, 2, 3, 4, 5, 6] i.e already sorted array
+Worst Time : O(n*log(n)) || Space Complecity : O(n) || array = [6, 5, 4, 3, 2, 1] i.e reverse sorted array
+Average Time : O(n*log(n)) || Space Complexity : O(n) || array = [2, 8, 4, 1, 9, 5] i.e elements in any order other than sorted or reverse order.
+
+
+
+4. Merge Sort inplace
+
+Time complexity will remain same in every case, because irrespective of the arrangement of array i.e sorted, reverse sorted or random, we are dividing the array into 2 parts
+and recursively sorting them and then merging them.
+Here, due to change in merge function, the time for sorting has been increased.
+
+The analysis has been done on the basis of function submitted by me
+T(n)=2T(n/2)+n^2 is the recurrence relation
+
+Best Time : O(n*log(n)) || Space Complexity : O(log(n)) || array = [1, 2, 3, 4, 5, 6] i.e already sorted array because merging can be done in O(1) by just concatenating 2 arrays.
+Worst Time : O(n^2) || Space Complecity : O(log(n)) || array = [6, 5, 4, 3, 2, 1] i.e reverse sorted array because for every merge we have to shift element by one
+Average Time : O(n^2) || Space Complexity : O(log(n)) || array = [2, 8, 4, 1, 9, 5] i.e elements in any order other than sorted or reverse order.
+
+Space required is O(log(n)) even after avoiding temporary array because of stack calls due to recursion.
+
+
